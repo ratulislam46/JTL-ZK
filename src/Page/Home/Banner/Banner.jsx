@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FaPlay, FaPause} from 'react-icons/fa';
+import { FaPlay, FaPause, FaArrowRight } from 'react-icons/fa';
 
 const Banner = () => {
     const videoRef = useRef(null);
@@ -17,7 +17,7 @@ const Banner = () => {
     };
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center mb-40">
             {/* Background Video */}
             <div className="absolute inset-0 z-0">
                 <video
@@ -31,7 +31,7 @@ const Banner = () => {
                     <source src='../../../../public/image/banner-vedio.mp4' type="video/mp4" />
                 </video>
 
-                {/* Video Overlay for better text readability */}
+                {/* Video Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
@@ -79,6 +79,39 @@ const Banner = () => {
                 >
                     {isPlaying ? <FaPause size={20} /> : <FaPlay size={20} />}
                 </button>
+            </div>
+            <div className='absolute -bottom-36  flex gap-4 container mx-auto '>
+                {/* Card 1 */}
+                <div className="bg-primary text-white p-8 md:p-12 flex-1 flex flex-col justify-between min-h-[340px]">
+                    <div className="space-y-3">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                            Quality Product
+                        </h2>
+                        <p className="text-sm sm:text-base md:text-lg">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                    <button className="flex items-center gap-2 mt-6">
+                        Read More <FaArrowRight />
+                    </button>
+                </div>
+
+                {/* Card 2 */}
+                <div className="bg-secondary text-white p-8 md:p-12 flex-1 flex flex-col justify-between min-h-[340px]">
+                    <div className="space-y-3">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+                            Project Overview
+                        </h2>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                            35 Millions
+                        </h1>
+                    </div>
+
+                    <button className="flex items-center gap-2 mt-6">
+                        Read More <FaArrowRight />
+                    </button>
+                </div>
             </div>
         </section>
     );
