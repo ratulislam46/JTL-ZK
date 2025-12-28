@@ -1,9 +1,12 @@
 import React from 'react';
 
+import Contact from './Contact';
+
 const Navbar = () => {
+
     return (
-        <div>
-            <h1>Navbar</h1>
+        <div className='bg-secondary'>
+            <Contact/>
         </div>
     );
 };
