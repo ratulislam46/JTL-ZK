@@ -1,11 +1,17 @@
 import React from 'react';
 import Banner from './Banner/Banner';
+import ServicePage from '../Service/ServicePage';
 
 const Home = () => {
     return (
-        <div>
-            <Banner/>
-        </div>
+        <>
+            <section>
+                <Banner />
+            </section>
+            <section>
+                <ServicePage />
+            </section>
+        </>
     );
 };
 
