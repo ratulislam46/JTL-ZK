@@ -84,7 +84,7 @@ const Banner = () => {
                     </button>
                 </div>
                 <div className='absolute -bottom-36  flex gap-4 container mx-auto '>
-                    <div className='lg:flex items-end gap-4 mt-50 lg:mt-0'>
+                    {/* <div className='lg:flex items-end gap-4 mt-50 lg:mt-0'>
                         <div className='flex items-center gap-2'>
                             <div>
                                 <IoLocationOutline size={34} className='text-secondary' />
@@ -103,9 +103,9 @@ const Banner = () => {
                                 <p className='text-gray-400'>compliance@danysknitwear.com</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* Card 1 */}
-                    <div className="bg-primary text-white p-8 md:p-12 flex-1 md:flex flex-col justify-between hidden">
+                    {/* <div className="bg-primary text-white p-8 md:p-12 flex-1 md:flex flex-col justify-between hidden">
                         <div className="space-y-3">
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                                 Quality Product
@@ -118,10 +118,10 @@ const Banner = () => {
                         <button className="flex items-center gap-2 mt-6">
                             Read More <FaArrowRight />
                         </button>
-                    </div>
+                    </div> */}
 
                     {/* Card 2 */}
-                    <div className="bg-secondary text-white p-8 md:p-12 flex-1 md:flex flex-col justify-between hidden">
+                    {/* <div className="bg-secondary text-white p-8 md:p-12 flex-1 md:flex flex-col justify-between hidden">
                         <div className="space-y-3">
                             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
                                 Project Overview
@@ -134,7 +134,7 @@ const Banner = () => {
                         <button className="flex items-center gap-2 mt-6">
                             Read More <FaArrowRight />
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
