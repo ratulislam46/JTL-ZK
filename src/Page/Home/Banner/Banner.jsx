@@ -4,7 +4,7 @@ import DefaultWeight from '../../../components/Default/DefaultWeight';
 const Banner = () => {
 
     return (
-        <div className="w-full mb-40">
+        <div className="w-full">
             <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] xl:h-[70vh] lg:h-[75vh] overflow-hidden">
 
                 {/* Background Video */}
