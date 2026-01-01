@@ -1,10 +1,12 @@
 import React from 'react';
 import DefaultWeight from '../Default/DefaultWeight';
 import PaymentChannels from './PaymentChannels';
+import {  FaInstagram } from 'react-icons/fa';
+import { CiLinkedin } from 'react-icons/ci';
 
 const Footer = () => {
     return (
-        <div className='py-10 bg-[#F7F7F7]'>
+        <div className='py-12 bg-[#F7F7F7]'>
             <DefaultWeight>
                 <div className='lg:flex justify-center lg:justify-between items-centerr'>
                     {/* first column */}
@@ -44,8 +46,23 @@ const Footer = () => {
                 </div>
 
                 {/* Payment Channels  */}
-                <div className='mt-8'>
+                <div className='mt-8 border-b-3 border-gray-400 pb-8'>
                     <PaymentChannels />
+                </div>
+                <div className='lg:flex justify-between pt-8 space-y-3 lg:space-y-0'>
+                    <p className='text-gray-400'>Copyright <span className='text-primary font-medium'>© 360D Soul Limited 2026.</span> All rights reserved.</p>
+
+                    {/* Social Link icons */}
+                    <div className='flex gap-4 justify-center'>
+                        <FaFacebookSquare size={24} className='text-blue-500' />
+                        <CiLinkedin size={30} className='text-blue-500' />
+                        <FaInstagram size={30} className='text-blue-500' />
+                    </div>
+                    <div className='text-gray-400 flex gap-5'>
+                        <h3>Teams & Condition</h3>
+                        <h3>Privacy & Policy</h3>
+                        <h3>Refund Policy</h3>
+                    </div>
                 </div>
             </DefaultWeight>
         </div>
