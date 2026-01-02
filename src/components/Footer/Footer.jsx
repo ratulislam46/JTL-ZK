@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DefaultWeight from '../Default/DefaultWeight';
 import PaymentChannels from './PaymentChannels';
-import {  FaFacebookSquare, FaInstagram } from 'react-icons/fa';
-import { CiLinkedin } from 'react-icons/ci';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { CiLinkedin, CiLocationArrow1 } from 'react-icons/ci';
+import { MdContentCopy, MdOutlineMailOutline } from 'react-icons/md';
+import { IoCopySharp } from 'react-icons/io5';
 
 const Footer = () => {
+
+    const email = "arfanratul46@gmail.com";
+    const [copied, setCopied] = useState(false);
+
+    const handleCopyEmail = async () => {
+        try {
+            await navigator.clipboard.writeText(email);
+            setCopied(true);
+
+            setTimeout(() => setCopied(false), 400);
+        } catch (err) {
+            alert("Failed to copy email");
+        }
+    };
+
     return (
         <div className='py-12 bg-[#F7F7F7]'>
             <DefaultWeight>
@@ -13,14 +30,21 @@ const Footer = () => {
                     <div className='mb-10 lg:mb-0'>
                         <img src="/public/image/Icon.png" alt="logo" className='h-14 mb-8' />
                         {/* Google map location  */}
-                        <div>
+                        <div className='flex gap-3 items-center'>
+                            <span><CiLocationArrow1 /></span>
                             <p className='text-gray-500 mb-1'>29 SE 2nd Ave, Miami Florida 33131, United States</p>
                         </div>
+
                         {/* After Clicked Email to this device */}
-                        <div>
-                            <p className='text-gray-500'>info@zaheen.com</p>
+                        <div className='flex gap-3 items-center'>
+                            <span><MdOutlineMailOutline /></span>
+                            <p className='text-gray-500'>{email}</p>
+                            <button onClick={handleCopyEmail} className='cursor-pointer'>
+                                {copied ? <IoCopySharp /> : <MdContentCopy />}
+                            </button>
                         </div>
-                        <h3 className='font-bold text-xl mt-2'>+8801643110638</h3>
+
+                        <h3 className='font-medium mt-2'>+8801643110638</h3>
                     </div>
 
                     {/* Second Column  */}
