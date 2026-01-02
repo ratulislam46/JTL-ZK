@@ -5,6 +5,7 @@ import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import { CiLinkedin, CiLocationArrow1 } from 'react-icons/ci';
 import { MdContentCopy, MdOutlineMailOutline } from 'react-icons/md';
 import { IoCopySharp } from 'react-icons/io5';
+import GoogleMap from './GoogleMap';
 
 const Footer = () => {
 
@@ -32,7 +33,7 @@ const Footer = () => {
                         {/* Google map location  */}
                         <div className='flex gap-3 items-center'>
                             <span><CiLocationArrow1 /></span>
-                            <p className='text-gray-500 mb-1'>29 SE 2nd Ave, Miami Florida 33131, United States</p>
+                            <GoogleMap/>
                         </div>
 
                         {/* After Clicked Email to this device */}
