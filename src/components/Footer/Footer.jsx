@@ -1,6 +1,8 @@
 import React from 'react';
 import DefaultWeight from '../Default/DefaultWeight';
 import PaymentChannels from './PaymentChannels';
+import {  FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { CiLinkedin } from 'react-icons/ci';
 
 const Footer = () => {
     return (
@@ -50,7 +52,12 @@ const Footer = () => {
                 <div className='lg:flex justify-between pt-8 space-y-3 lg:space-y-0'>
                     <p className='text-gray-400'>Copyright <span className='text-primary font-medium'>© 360D Soul Limited 2026.</span> All rights reserved.</p>
 
-                  
+                    {/* Social Link icons */}
+                    <div className='flex items-center gap-4'>
+                        <FaFacebookSquare size={24} className='text-blue-500' />
+                        <CiLinkedin size={28} className='text-blue-500' />
+                        <FaInstagram size={28} className='text-blue-500' />
+                    </div>
                     <div className='text-gray-400 flex gap-5'>
                         <h3>Teams & Condition</h3>
                         <h3>Privacy & Policy</h3>
