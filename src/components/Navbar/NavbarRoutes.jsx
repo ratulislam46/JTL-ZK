@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-    FaUser,
-    FaShoppingCart,
-    FaChevronDown,
-    FaBars,
-    FaTimes,
-} from "react-icons/fa";
-import { AiFillAppstore } from "react-icons/ai";
+import { FaUser, FaShoppingCart, FaChevronDown, FaBars, FaTimes, } from "react-icons/fa";
 
 const NavbarRoutes = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
