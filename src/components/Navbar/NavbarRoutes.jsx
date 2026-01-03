@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
-  FaUser,
-  FaShoppingCart,
-  FaChevronDown,
-  FaBars,
-  FaTimes,
+    FaUser,
+    FaShoppingCart,
+    FaChevronDown,
+    FaBars,
+    FaTimes,
 } from "react-icons/fa";
 import { AiFillAppstore } from "react-icons/ai";
 
@@ -12,7 +12,6 @@ const NavbarRoutes = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
 
-    // Main navigation items (left)
     const navItems = [
         { id: "home", label: "Home", href: "#" },
         { id: "about", label: "About Us", href: "#" },
@@ -43,7 +42,6 @@ const NavbarRoutes = () => {
         { id: "blogs", label: "Blogs", href: "#" },
     ];
 
-    // Right side items
     const rightItems = [
         { id: "cart", label: "Cart", icon: <FaShoppingCart />, href: "#" },
         { id: "account", label: "Your Account", icon: <FaUser />, href: "#" },
@@ -57,7 +55,7 @@ const NavbarRoutes = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-2 border">
+        <div className="container mx-auto px-4 py-2">
             <div className="flex justify-between items-center h-16">
 
                 {/* Left side: Logo + Main navigation */}
@@ -72,7 +70,7 @@ const NavbarRoutes = () => {
                         <div key={item.id} className="relative group">
                             <button
                                 onClick={() => item.dropdown && toggleDropdown(item.id)}
-                                className="flex items-center px-4 py-2 text-sm font-medium rounded-md hover:bg-blue-500 transition-colors duration-200 gap-1"
+                                className="flex items-center px-4 py-2 text-sm font-medium rounded-md hover:bg-secondary transition-colors duration-200 gap-1"
                             >
                                 {item.icon}
                                 {item.label}
@@ -105,7 +103,7 @@ const NavbarRoutes = () => {
                         <a
                             key={item.id}
                             href={item.href}
-                            className="flex items-center px-3 py-2 rounded-md hover:bg-blue-500 transition-colors duration-200 gap-1"
+                            className="flex items-center px-3 py-2 rounded-md hover:bg-secondary transition-colors duration-200 gap-1"
                         >
                             {item.icon}
                             <span className="font-medium">{item.label}</span>
@@ -117,7 +115,7 @@ const NavbarRoutes = () => {
                 <div className="lg:hidden flex items-center">
                     <button
                         onClick={toggleMobileMenu}
-                        className="p-2 rounded-md hover:bg-blue-500 transition duration-200"
+                        className="p-2 rounded-md hover:bg-secondary transition duration-200 cursor-pointer"
                     >
                         {isMobileMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
                     </button>
@@ -126,12 +124,11 @@ const NavbarRoutes = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden bg-blue-700 rounded-b-lg shadow-lg">
+                <div className="lg:hidden bg-secondary rounded-b-lg shadow-lg">
                     <div className="px-2 pt-2 pb-3 space-y-2">
-                        {/* Logo */}
-                        <div className="flex items-center px-3 py-3 gap-2">
-                            <AiFillAppstore size={28} />
-                            <span className="font-bold text-xl">TechYard</span>
+                        {/* Website Icon */}
+                        <div className="flex items-center p-4 bg-white">
+                            <img src="../../../public/image/Icon.png" alt="" />
                         </div>
 
                         {/* Left items: main nav */}
@@ -140,7 +137,7 @@ const NavbarRoutes = () => {
                                 <div className="flex items-center justify-between">
                                     <a
                                         href={item.href}
-                                        className="flex items-center px-3 py-3 text-base font-medium rounded-md hover:bg-blue-600 gap-2"
+                                        className="flex items-center px-3 py-3 text-base font-medium rounded-md hover:bg-teal-400 gap-2"
                                     >
                                         {item.icon}
                                         {item.label}
@@ -159,12 +156,12 @@ const NavbarRoutes = () => {
                                 </div>
 
                                 {item.dropdown && activeDropdown === item.id && (
-                                    <div className="ml-6 mb-2 bg-blue-800 rounded-md">
+                                    <div className="ml-6 mb-2 bg-secondary rounded-md">
                                         {item.dropdownItems.map((dropdownItem, idx) => (
                                             <a
                                                 key={idx}
                                                 href={dropdownItem.href}
-                                                className="block px-4 py-3 text-sm hover:bg-blue-700"
+                                                className="block px-4 py-3 text-sm hover:bg-teal-400"
                                             >
                                                 {dropdownItem.label}
                                             </a>
@@ -179,7 +176,7 @@ const NavbarRoutes = () => {
                             <a
                                 key={item.id}
                                 href={item.href}
-                                className="flex items-center px-3 py-3 text-base font-medium rounded-md hover:bg-blue-600 gap-2"
+                                className="flex items-center px-3 py-3 text-base font-medium rounded-md hover:bg-teal-400 gap-2"
                             >
                                 {item.icon}
                                 {item.label}
@@ -189,8 +186,6 @@ const NavbarRoutes = () => {
                 </div>
             )}
         </div>
-
-
     );
 };
 
