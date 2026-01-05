@@ -33,12 +33,7 @@ const NavbarRoutes = () => {
             ],
         },
         { id: "blogs", label: "Blogs", href: "#" },
-    ];
-
-    const rightItems = [
-        { id: "cart", label: "Cart", icon: <FaShoppingCart />, href: "#" },
-        { id: "account", label: "Your Account", icon: <FaUser />, href: "#" },
-        { id: "contact", label: "Contact Us", href: "#" },
+        { id: "contact", label: "Contact Us", href: "#" }
     ];
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -92,16 +87,15 @@ const NavbarRoutes = () => {
 
                 {/* Right side: Cart, Account, Contact */}
                 <div className="hidden lg:flex items-center space-x-4">
-                    {rightItems.map((item) => (
-                        <a
-                            key={item.id}
-                            href={item.href}
-                            className="flex items-center px-3 py-2 rounded-md hover:bg-secondary transition-colors duration-200 gap-1"
-                        >
-                            {item.icon}
-                            <span className="font-medium">{item.label}</span>
-                        </a>
-                    ))}
+                    {/* Card */}
+                    <div>
+                        <FaShoppingCart />
+                    </div>
+
+                    {/* Account */}
+                    <div>
+                        <FaUser />
+                    </div>
                 </div>
 
                 {/* Mobile menu button */}
@@ -164,17 +158,15 @@ const NavbarRoutes = () => {
                             </div>
                         ))}
 
-                        {/* Right items: Cart, Account, Contact */}
-                        {rightItems.map((item) => (
-                            <a
-                                key={item.id}
-                                href={item.href}
-                                className="flex items-center px-3 py-3 text-base font-medium rounded-md hover:bg-teal-400 gap-2"
-                            >
-                                {item.icon}
-                                {item.label}
-                            </a>
-                        ))}
+                        {/* Card */}
+                        <div>
+                            <FaShoppingCart />
+                        </div>
+
+                        {/* Account */}
+                        <div>
+                            <FaUser />
+                        </div>
                     </div>
                 </div>
             )}
