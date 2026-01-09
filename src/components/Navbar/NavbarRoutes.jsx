@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaUser, FaShoppingCart, FaChevronDown, FaBars, FaTimes, } from "react-icons/fa";
+import { Link } from "react-router";
 
 const NavbarRoutes = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -93,8 +94,9 @@ const NavbarRoutes = () => {
                     </div>
 
                     {/* Account */}
-                    <div>
-                        <FaUser />
+                    <div className="flex gap-3">
+                        <Link to='/signin' className="p-2 bg-primary/90 text-white border hover:border-secondary">Signin</Link>
+                        <Link to='/signup' className="p-2 bg-primary/90 text-white border hover:border-secondary">Signup</Link>
                     </div>
                 </div>
 
